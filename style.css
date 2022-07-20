@@ -1,0 +1,260 @@
+:root {
+    --base-bg: #161616;
+    --white: #fff;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    font-size: 16px;
+}
+
+section {
+    padding: 40px 0;
+}
+
+section.first {
+    padding-top: 80px;
+}
+
+section.last {
+    padding-bottom: 80px;
+}
+
+.section-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    color: #121212;
+}
+
+h1 {
+    font-size: 70px;
+    line-height: 80px;
+    font-weight: 700;
+}
+
+h2 {
+    font-size: 32px;
+    line-height: 45px;
+}
+
+p,
+span {
+    font-size: 16px;
+    line-height: 25px;
+}
+
+p {
+    color: #707070;
+}
+
+img {
+    width: 100%;
+}
+
+a {
+    text-decoration: none;
+    color: #FF5959;
+}
+
+ul {
+    list-style: none;
+}
+
+input {
+    border: 0;
+}
+
+.btn {
+    display: inline-block;
+    padding: 12px 24px;
+    border-radius: 4px;
+}
+
+.btn.btn-base-color {
+    background: #FF5959;
+    color: var(--white);
+}
+
+.column-elements {
+    padding-right: 10px;
+    padding-left: 10px;
+}
+
+.col-40 {
+    flex: 0 0 40%;
+}
+
+.col-50 {
+    flex: 0 0 50%;
+}
+
+.col-60 {
+    flex: 0 0 60%;
+}
+
+.col-100 {
+    flex: 0 0 100%;
+}
+
+.row {
+    margin: 0 10px;
+}
+
+.inner-section {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.mt-15 {
+    margin-top: 15px;
+}
+
+.mt-25 {
+    margin-top: 25px;
+}
+
+.pt-45 {
+    padding-top: 45px;
+}
+
+/* -------------- Hero Section Style Start -------------- */
+.hero-section {
+    max-height: 650px;
+}
+
+.hero-section .section-container {
+    max-width: 1320px;
+    background: var(--base-bg);
+    border-radius: 30px;
+}
+
+.hero-section .section-container .column-elements:first-child {
+    padding: 80px;
+}
+
+.hero-section .section-container .column-elements:last-child {
+    display: flex;
+    padding: 40px 60px 0 40px;
+}
+
+.hero-section h1 {
+    color: var(--white);
+    margin-bottom: 20px;
+}
+
+.hero-section p {
+    color: var(--white);
+    margin-bottom: 30px;
+}
+
+.hero-section img {
+    width: 80%;
+    margin: 0 auto;
+}
+
+/* -------------- Hero Section Style End -------------- */
+
+
+/* -------------- Football Info Section Style Start -------------- */
+.football-info .section-container {
+    display: flex;
+    flex-wrap: nowrap;
+}
+
+.football-info .section-container>.col-fixed-width {
+    flex: 0 0 312px;
+}
+
+.col-fixed-width nav {
+    background: black;
+    padding: 30px;
+    border-radius: 10px;
+}
+
+.col-fixed-width nav a {
+    width: 100%;
+    background: #fff;
+    display: inline-block;
+    padding: 10px;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.football-info .section-container>.col-auto {
+    flex: auto;
+}
+
+.info-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+
+}
+
+.grid-items {
+    border: 1px solid #E8E8E8;
+    border-radius: 10px;
+}
+
+.grid-items img {}
+
+.grid-items .grid-item-content {
+    padding: 20px;
+}
+
+.grid-items .grid-item-content li {
+    display: inline;
+    padding-right: 15px;
+}
+
+.grid-items h3 {
+    margin-bottom: 20px;
+}
+
+.grid-items .info-category {
+    margin-bottom: 15px;
+}
+
+.grid-items .info-category a {
+    color: var(--base-bg);
+    padding: 2px 10px;
+    border: 1px solid var(--base-bg);
+    border-radius: 5px;
+}
+
+.grid-items .optional-info i {
+    padding-right: 5px;
+}
+
+/* -------------- Football Info Section Style End -------------- */
+
+
+/* -------------- Footer Style Start -------------- */
+footer {
+    background-color: #0b0d17;
+    text-align: center;
+    padding: 40px 10px;
+}
+
+footer h3 {
+    color: #fff;
+    font-size: 25px;
+}
+
+/* -------------- Footer Style End -------------- */
