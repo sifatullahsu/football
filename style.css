@@ -189,7 +189,7 @@ input {
     transition: margin-left .5s ease, background .5s ease;
     padding: 5px 8px;
     border-radius: 50%;
-    color: #334094;
+    color: var(--main);
 }
 
 .hero-section img {
@@ -280,6 +280,10 @@ input {
     font-weight: 600;
 }
 
+.grid-items h3 a:hover {
+    color: var(--main);
+}
+
 .grid-items h3 a {
     color: var(--base-bg);
 }
@@ -304,7 +308,11 @@ input {
     font-weight: 300;
 }
 
-
+.view-all {
+    text-align: center;
+    margin-top: 60px;
+    display: none;
+}
 
 .upcomming .grid-items .grid-item-content {
     padding: 55px 30px;
@@ -349,6 +357,25 @@ footer nav {
 
 footer nav a {
     color: var(--footer);
+}
+
+.social-icon {
+    margin-top: 60px;
+}
+
+.social-icon a {
+    padding: 0 15px;
+}
+
+.social-icon i {
+    font-size: 30px;
+    color: var(--footer);
+    transition: color .3s;
+}
+
+.social-icon i:hover {
+    color: var(--main);
+    transition: color .3s;
 }
 
 /* -------------- Footer Style End -------------- */
@@ -422,6 +449,10 @@ footer nav a {
         grid-template-columns: repeat(2, 1fr);
         gap: 15px;
         padding: 0 30px;
+    }
+
+    .view-all {
+        display: block;
     }
 
     footer nav {
