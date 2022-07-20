@@ -2,7 +2,7 @@
     --base-bg: #161616;
     --white: #fff;
     --gray: rgba(22, 22, 22, 0.7);
-    --main: #DD0000;
+    --main: #334094;
     --opacity-low: rgba(255, 255, 255, 0.1);
     --border: rgba(232, 232, 232, 1);
     --footer: #B9B9B9;
@@ -97,7 +97,7 @@ input {
 }
 
 .btn.btn-base-color {
-    background: #FF5959;
+    background: var(--main);
     color: var(--white);
 }
 
@@ -178,7 +178,18 @@ input {
 }
 
 .hero-section a i {
-    padding-left: 6px;
+    margin-left: 6px;
+    transition: margin-left .5s ease, background .5s ease;
+    font-size: 12px;
+}
+
+.hero-section a:hover i {
+    margin-left: 30px;
+    background: #fff;
+    transition: margin-left .5s ease, background .5s ease;
+    padding: 5px 8px;
+    border-radius: 50%;
+    color: #334094;
 }
 
 .hero-section img {
@@ -207,6 +218,7 @@ input {
     background: var(--base-bg);
     padding: 30px;
     border-radius: 10px;
+    margin-right: 20px;
 }
 
 .col-fixed-width nav li {
@@ -229,7 +241,7 @@ input {
     text-align: center;
 }
 
-.page-id-1 .col-fixed-width nav li.active a {
+.football-info .col-fixed-width nav li.active a {
     background: var(--main);
     color: var(--white);
 }
@@ -250,7 +262,7 @@ input {
     border-radius: 10px;
 }
 
-.grid-items img {}
+/* .grid-items img {} */
 
 .grid-items .grid-item-content {
     padding: 20px;
@@ -290,6 +302,26 @@ input {
 .grid-items .optional-info i {
     padding-right: 5px;
     font-weight: 300;
+}
+
+
+
+.upcomming .grid-items .grid-item-content {
+    padding: 55px 30px;
+    text-align: center;
+}
+
+.upcomming .grid-items h3 {
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+.upcomming .match-between {
+    display: grid;
+    justify-content: center;
+    grid-template-columns: auto auto auto;
+    grid-gap: 20px;
+    align-items: center;
 }
 
 /* -------------- Football Info Section Style End -------------- */
@@ -358,8 +390,11 @@ footer nav a {
         flex: 0 0 100%;
     }
 
+
+
     .col-fixed-width nav {
         background: unset;
+        margin-right: unset;
     }
 
     .col-fixed-width nav ul {
@@ -470,5 +505,13 @@ footer nav a {
 
     .horizontal-row {
         margin: 25px 0;
+    }
+
+    footer nav {
+        flex-direction: column;
+    }
+
+    footer nav a {
+        margin: 15px 0;
     }
 }
