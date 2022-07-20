@@ -1,6 +1,11 @@
 :root {
     --base-bg: #161616;
     --white: #fff;
+    --gray: rgba(22, 22, 22, 0.7);
+    --main: #DD0000;
+    --opacity-low: rgba(255, 255, 255, 0.1);
+    --border: rgba(232, 232, 232, 1);
+    --footer: #B9B9B9;
 }
 
 * {
@@ -27,10 +32,15 @@ section.last {
 }
 
 .section-container {
-    max-width: 1200px;
+    max-width: 1320px;
     margin: 0 auto;
     display: flex;
-    flex-wrap: wrap;
+    /* flex-wrap: wrap; */
+}
+
+hr {
+    padding: 30px 0;
+    color: var(--opacity-low);
 }
 
 h1,
@@ -91,10 +101,10 @@ input {
     color: var(--white);
 }
 
-.column-elements {
+/* .column-elements {
     padding-right: 10px;
     padding-left: 10px;
-}
+} */
 
 .col-40 {
     flex: 0 0 40%;
@@ -133,13 +143,17 @@ input {
     padding-top: 45px;
 }
 
-/* -------------- Hero Section Style Start -------------- */
-.hero-section {
-    max-height: 650px;
+.horizontal-row {
+    border-top: 1px solid var(--opacity-low);
+    margin: 50px 0;
 }
 
+/* -------------- Hero Section Style Start -------------- */
+/* .hero-section {
+    max-height: 650px;
+} */
+
 .hero-section .section-container {
-    max-width: 1320px;
     background: var(--base-bg);
     border-radius: 30px;
 }
@@ -159,8 +173,12 @@ input {
 }
 
 .hero-section p {
-    color: var(--white);
+    color: var(--border);
     margin-bottom: 30px;
+}
+
+.hero-section a i {
+    padding-left: 6px;
 }
 
 .hero-section img {
@@ -172,6 +190,10 @@ input {
 
 
 /* -------------- Football Info Section Style Start -------------- */
+.football-info {
+    padding: 80px 0;
+}
+
 .football-info .section-container {
     display: flex;
     flex-wrap: nowrap;
@@ -182,18 +204,34 @@ input {
 }
 
 .col-fixed-width nav {
-    background: black;
+    background: var(--base-bg);
     padding: 30px;
     border-radius: 10px;
+}
+
+.col-fixed-width nav li {
+    margin-bottom: 30px;
+}
+
+
+
+.col-fixed-width nav li:last-child {
+    margin-bottom: 0;
 }
 
 .col-fixed-width nav a {
     width: 100%;
     background: #fff;
+    color: var(--base-bg);
     display: inline-block;
     padding: 10px;
     border-radius: 10px;
     text-align: center;
+}
+
+.page-id-1 .col-fixed-width nav li.active a {
+    background: var(--main);
+    color: var(--white);
 }
 
 .football-info .section-container>.col-auto {
@@ -225,6 +263,13 @@ input {
 
 .grid-items h3 {
     margin-bottom: 20px;
+    font-size: 18px;
+    line-height: 27px;
+    font-weight: 600;
+}
+
+.grid-items h3 a {
+    color: var(--base-bg);
 }
 
 .grid-items .info-category {
@@ -238,8 +283,13 @@ input {
     border-radius: 5px;
 }
 
+.grid-items .optional-info {
+    color: var(--gray);
+}
+
 .grid-items .optional-info i {
     padding-right: 5px;
+    font-weight: 300;
 }
 
 /* -------------- Football Info Section Style End -------------- */
@@ -247,14 +297,178 @@ input {
 
 /* -------------- Footer Style Start -------------- */
 footer {
-    background-color: #0b0d17;
+    background-color: var(--base-bg);
     text-align: center;
-    padding: 40px 10px;
+    padding: 80px 10px;
 }
 
 footer h3 {
-    color: #fff;
-    font-size: 25px;
+    color: var(--white);
+    font-size: 40px;
+    line-height: 60px;
+}
+
+footer nav {
+    max-width: 900px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+}
+
+footer nav a {
+    color: var(--footer);
 }
 
 /* -------------- Footer Style End -------------- */
+
+
+
+
+@media (max-width: 1024px) {
+    h1 {
+        font-size: 40px;
+        line-height: 50px;
+    }
+
+    .hero-section .section-container {
+        max-width: 734px;
+    }
+
+    .hero-section .section-container .column-elements:first-child {
+        padding: 60px 0 60px 60px;
+    }
+
+    .hero-section .section-container .column-elements:last-child {
+        padding: 40px 0 0 0;
+    }
+
+    .hero-section p {
+        display: -webkit-box;
+        -webkit-line-clamp: 2;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+    }
+
+    .football-info .section-container {
+        flex-wrap: wrap;
+    }
+
+    .football-info .section-container>.col-fixed-width,
+    .football-info .section-container>.col-auto {
+        flex: 0 0 100%;
+    }
+
+    .col-fixed-width nav {
+        background: unset;
+    }
+
+    .col-fixed-width nav ul {
+        display: flex;
+    }
+
+    .col-fixed-width nav ul li {
+        flex: 33.33%;
+        margin-bottom: unset;
+
+        margin: 8px;
+
+    }
+
+    .col-fixed-width nav ul li a {
+        border: 1px solid var(--border);
+        border-radius: 10px;
+    }
+
+    .col-fixed-width nav ul li:last-child a {
+        border: unset;
+    }
+
+    .info-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 15px;
+        padding: 0 30px;
+    }
+
+    footer nav {
+        max-width: 700px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    footer nav a {
+        flex: 0 0 25%;
+        margin: 20px 0;
+    }
+}
+
+@media (max-width: 767px) {
+    h1 {
+        font-size: 22px;
+        line-height: 33px;
+    }
+
+    .hero-section {
+        padding: 20px;
+    }
+
+    .hero-section .section-container {
+        max-width: 100%;
+        flex-wrap: wrap;
+    }
+
+    .hero-section .section-container .column-elements {
+        flex: 0 0 100%;
+
+    }
+
+    .hero-section .section-container .column-elements:first-child {
+        padding: 30px 40px;
+        text-align: center;
+    }
+
+    .hero-section p {
+        font-size: 14px;
+        line-height: 24px;
+    }
+
+    .hero-section .section-container .column-elements:last-child {
+        padding: 0;
+    }
+
+    .hero-section img {
+        width: 60%;
+    }
+
+    .football-info {
+        padding: 20px 0;
+    }
+
+    .col-fixed-width nav ul {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .col-fixed-width nav a {
+        width: unset;
+        padding: 10px 35px;
+    }
+
+    .info-grid {
+        grid-template-columns: repeat(1, 1fr);
+        gap: 20px;
+        padding: 0 20px;
+    }
+
+    footer {
+        padding: 25px;
+    }
+
+    footer h3 {
+        font-size: 22px;
+        line-height: 33px;
+    }
+
+    .horizontal-row {
+        margin: 25px 0;
+    }
+}
